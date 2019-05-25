@@ -271,20 +271,20 @@ var counter = false;
     }
 	
     function getWords(){
-        $.get('http://localhost:3000/words',(data) => {
+        $.get('http://ec2-13-239-119-88.ap-southeast-2.compute.amazonaws.com/words',(data) => {
            data.forEach(addWords);
         })
     }
 
      function getLabel(){
-        $.get('http://localhost:3000/getLabel',(data) => {
+        $.get('http://ec2-13-239-119-88.ap-southeast-2.compute.amazonaws.com/getLabel',(data) => {
            data.forEach(addWords);
         })
     }
 	
     function postWord(word){
         // console.log('what is happening' + word)
-        $.post('http://localhost:3000/', word)
+        $.post('http://ec2-13-239-119-88.ap-southeast-2.compute.amazonaws.com/', word)
     }
 
 
